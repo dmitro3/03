@@ -1,0 +1,494 @@
+body {
+    font: 13px Helvetica, Tahoma, verdana, sans-serif;
+}
+
+.betting_slip {
+    width: 400px;
+    position: fixed;
+    top: 150px;
+    right: 0;
+    box-shadow: -2px -2px 2px 0px #697a84;
+}
+
+.stake_input {
+    width: 65px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.risk_input {
+    width: 65px;
+    display: inline-block;
+}
+
+.betting_slip ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.betting-bid-box {
+    background-color: #d1dce2;
+    padding: 5px 0 5px 5px;
+    color: #465864;
+    width: 100%
+}
+
+.betting-bid-box td:nth-child(2) {
+    padding-left: 70px;
+}
+
+.betting-bid-box td:last-child {
+    text-align: right;
+    padding-right: 15px;
+}
+
+#event_title {
+    background-color: #262B3F;
+    text-shadow: 1px 1px 1px #000;
+    color: #4095d2;
+    padding: 5px 10px;
+}
+
+#main_container {
+    color: #FFF;
+    background-color: #000;
+}
+
+#empty_message {
+    text-align: center;
+    padding: 25px 10px;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.bet-main-content ul {
+    margin: 0;
+}
+
+.bet-main-content ul li {
+    border-bottom: 1px dashed gray;
+    text-align: left;
+    height: 40px;
+    padding: 5px 0 0 5px;
+}
+
+.bet-main-content ul li:last-child {
+    border: none;
+    padding-top: 5px;
+}
+
+#subtitle {
+    font-weight: 200;
+    font-size: 12px;
+}
+
+#max_bet {
+    position: relative;
+    top: -30px;
+    width: 165px;
+    margin-left: 228px;
+    display: inline-block;
+}
+
+.close {
+    border: 1px red;
+    border-radius: 10px;
+    background: red;
+    margin-right: 2px;
+    font-size: 10px;
+    padding-left: 0px;
+}
+
+.odds {
+    color: #8fb600;
+    float: right;
+    font-size: 12px;
+    margin: auto 5px;
+    display: inline-block;
+}
+
+.left_side {
+    float: left;
+}
+
+.right_side {
+    float: right;
+}
+
+.stake_value {
+    clear: both;
+    float: right;
+    padding-right: 5px;
+    font-size: 12px;
+}
+
+#total_value {
+    float: right;
+    padding: 10px 10px 5px;
+}
+
+#total_winnings {
+    float: right;
+    padding: 10px 10px 5px;
+    display: inline-block;
+}
+
+#login_alert {
+    background-color: #fef8d4;
+    font-size: 15px;
+    height: 0px;
+    padding: 0px 10px 0;
+    text-align: center;
+    border-bottom: 20px solid grey;
+}
+
+button {
+    height: 30px;
+    font-size: 12px;
+}
+
+#remove_button {
+    background-image: linear-gradient(to bottom, #f8fafb, #cad8e2);
+    width: 100px;
+    font: gray;
+    margin: 5px 10px;
+    border: none;
+    height: 30px;
+    font-size: 12px;
+    color: #000;
+    padding: 9px 18px;
+    margin-top: 7px;
+    display: table;
+    cursor: pointer;
+}
+
+#confirm {
+    clear: both;
+}
+
+#place_bet {
+    background-image: linear-gradient(to bottom, #ffec64, #e0a611);
+    width: 80px;
+    margin: 5px 0 10px 100px;
+    border: none;
+}
+
+#button_background {
+    background-color: #333333;
+}
+
+
+/* fieldset.forget_pass01 {
+    width: 75%;
+} */
+
+
+/*---------Loader CSS------------*/
+
+.loader-wrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999999;
+}
+
+.loader-container {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    filter: url('#goo');
+    animation: rotate-move 2s ease-in-out infinite;
+}
+
+.dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.dot-3 {
+    background-color: #ffffff;
+    animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+}
+
+.dot-2 {
+    background-color: #ffffff;
+    animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+}
+
+.dot-1 {
+    background-color: #ffffff;
+    animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+}
+
+@keyframes dot-3-move {
+    20% {
+        transform: scale(1)
+    }
+    45% {
+        transform: translateY(-16px) scale(.60)
+    }
+    60% {
+        transform: translateY(-50px) scale(.60)
+    }
+    80% {
+        transform: translateY(-30px) scale(.60)
+    }
+    100% {
+        transform: translateY(0px) scale(1)
+    }
+}
+
+@keyframes dot-2-move {
+    20% {
+        transform: scale(1)
+    }
+    45% {
+        transform: translate(-16px, 12px) scale(.60)
+    }
+    60% {
+        transform: translate(-50px, 30px) scale(.60)
+    }
+    80% {
+        transform: translate(-30px, 30px) scale(.60)
+    }
+    100% {
+        transform: translateY(0px) scale(1)
+    }
+}
+
+@keyframes dot-1-move {
+    20% {
+        transform: scale(1)
+    }
+    45% {
+        transform: translate(16px, 12px) scale(.60)
+    }
+    60% {
+        transform: translate(50px, 30px) scale(.60)
+    }
+    80% {
+        transform: translate(30px, 30px) scale(.60)
+    }
+    100% {
+        transform: translateY(0px) scale(1)
+    }
+}
+
+@keyframes rotate-move {
+    55% {
+        transform: translate(-50%, -50%) rotate(0deg)
+    }
+    80% {
+        transform: translate(-50%, -50%) rotate(360deg)
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg)
+    }
+}
+
+@keyframes index {
+    0%,
+    100% {
+        z-index: 3
+    }
+    33.3% {
+        z-index: 2
+    }
+    66.6% {
+        z-index: 1
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        top: 30px;
+        height: 5px;
+        border-radius: 60px 60px 20px 20px;
+        -webkit-transform: scaleX(2);
+        transform: scaleX(2);
+    }
+    35% {
+        height: 15px;
+        border-radius: 50%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 30px;
+        height: 5px;
+        border-radius: 60px 60px 20px 20px;
+        -webkit-transform: scaleX(2);
+        transform: scaleX(2);
+    }
+    35% {
+        height: 15px;
+        border-radius: 50%;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.stake_input {
+    background: #fff;
+    padding: 3px 12px;
+    color: #000;
+    border-radius: 3px;
+    border: 0;
+}
+
+.risk_input {
+    background: #fff;
+    padding: 3px 12px;
+    color: #000;
+    border-radius: 3px;
+    border: 0;
+}
+
+.close {
+    float: left;
+    opacity: 1;
+    padding-left: 2px;
+    padding-right: 1px;
+    font-size: 10px;
+    color: #fff;
+    line-height: normal;
+}
+
+.close .close_betslip {
+    color: #fff;
+    line-height: normal;
+}
+
+#confirm input[type="checkbox"] {
+    display: inline-block;
+    width: 8%;
+    margin-top: 0px;
+}
+
+#place_bet {
+    margin: 5px 0 10px 60px;
+}
+
+#login_alert {
+    height: 100%;
+    color: #000;
+    border-bottom: none;
+}
+
+#max_bet {
+    top: -35px;
+}
+
+.betting-bid-box td {
+    padding: 5px 0 5px 5px;
+}
+
+#confirm {
+    position: relative;
+    top: 24px;
+}
+
+#place_bet {
+    cursor: pointer;
+    position: relative;
+    left: 60%;
+    top: -20px;
+    color: #FFF;
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 1.428571429;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+
+.bet-main-content ul li {
+    line-height: normal;
+}
+
+.bet-main-content ul {
+    font-family: Helvetica, Tahoma, verdana, sans-serif;
+}
+
+.add_cart_link_01 {
+    cursor: pointer;
+}
+
+@media(max-width:400px) {
+    .betting_slip {
+        width: 320px;
+    }
+    .stake_input {
+        width: 58px;
+    }
+    .risk_input {
+        width: 58px;
+    }
+    #max_bet {
+        margin-left: 150px;
+    }
+    #place_bet {
+        position: relative;
+        left: 55%;
+    }
+}
+
+.table.table-striped tbody tr td {
+    position: relative;
+}
+
+.maxBet {
+    font-size: 11px !important;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    margin-bottom: 0;
+}
+
+.table.table-striped tbody tr td .dropdown-menu {
+    width: 100%;
+    background: #fff;
+}
+
+ul.nav.nav-tabs~.content.content-transparent.tab-content {
+    overflow: visible;
+}
+
+.table.table-striped tbody tr td .dropdown-menu a.dropdown-item {
+    text-align: center !important;
+    opacity: 0.7;
+}
+
+.table.table-striped tbody tr td .dropdown-menu a.dropdown-item:hover {
+    opacity: 1;
+}
+
+.modal-form div#confirm {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}

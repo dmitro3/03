@@ -1,0 +1,17 @@
+span.order_notice {
+    font-size: 15px;
+    text-align: center;
+    display: table;
+    padding: 10px;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border-color: var(--border-color);
+}
+
+@media (min-width:992px) {
+    .woo-wallet-my-wallet-container>ul {
+        width: 30%;
+    }
+}
